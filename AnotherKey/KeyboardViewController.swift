@@ -11,7 +11,10 @@ import UIKit
 class KeyboardViewController: UIInputViewController {
     
     var keyboardView: UIView!
-    var currentQuote: String!
+    var currentIndex: Int!
+    var favSelect = true
+    @IBOutlet weak var favButton: UIButton!
+    
     
     override func updateViewConstraints() {
         super.updateViewConstraints()
@@ -44,7 +47,7 @@ class KeyboardViewController: UIInputViewController {
     // -----------------------
     
     func loadKeyboardView (){
-        let keyNib = UINib(nibName: "Main", bundle: nil)
+        let keyNib = UINib(nibName: "MainView", bundle: nil)
         keyboardView = keyNib.instantiateWithOwner(self, options: nil)[0] as! UIView
         view.backgroundColor = keyboardView.backgroundColor
         view.addSubview(keyboardView)
@@ -55,7 +58,7 @@ class KeyboardViewController: UIInputViewController {
     // -----------------------
     // |  Next Button
     // -----------------------
-    @IBAction func nextKeyboard() {
+    @IBAction func nextKey() {
         
         advanceToNextInputMode()
         
@@ -63,26 +66,56 @@ class KeyboardViewController: UIInputViewController {
     
     
     // -----------------------
-    // |  Anotha One Button
+    // |  Another One Button
     // -----------------------
     
-    @IBAction func generateQuot() {
+    @IBAction func generateQuote() {
         
         let randomIndex = Int(arc4random_uniform(9))
-        print(randomIndex)
+
+        
+        if favoriteArray.contains(randomIndex) {
+            self.favButton.setBackgroundImage(UIImage(named: "emptyFav.png"), forState: .Normal)
+
+        }
         
         let proxy = textDocumentProxy as UITextDocumentProxy
         proxy.insertText(quotesArray[randomIndex])
-        
-        currentQuote = quotesArray[randomIndex]
+        currentIndex = randomIndex
+
         
     }
     
     
     @IBAction func favorite (){
-        quotesArray.append(currentQuote!)
+        if favSelect == true {
+            self.favButton.setBackgroundImage(UIImage(named: "filledFav.png"), forState: .Normal)
+            
+            favSelect = false
+            
+            if  !favoriteArray.contains(currentIndex){
+
+                favoriteArray.append(currentIndex)
+                quotesArray.append(quotesArray[currentIndex!])
+                
+            }
+            
+        } else {
+            
+            self.favButton.setBackgroundImage(UIImage(named: "emptyFav.png"), forState: .Normal)
+            favSelect = true
+            
+            if favoriteArray.contains(currentIndex){
+                
+                favoriteArray.removeAtIndex(favoriteArray.indexOf(currentIndex)!)
+                
+            }
+        
+        }
+        
     }
     
+
     
 }
 

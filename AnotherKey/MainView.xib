@@ -5,14 +5,53 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyboardViewController" customModule="AnotherKey" customModuleProvider="target">
+            <connections>
+                <outlet property="favButton" destination="cHK-vx-0y5" id="qqd-2h-mEP"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="khaled.png" translatesAutoresizingMaskIntoConstraints="NO" id="AgD-02-vum">
+                    <rect key="frame" x="101" y="0.0" width="136" height="70"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBs-RU-EYf">
+                    <rect key="frame" x="8" y="162" width="30" height="30"/>
+                    <state key="normal" backgroundImage="charGlobe.png"/>
+                    <connections>
+                        <action selector="nextKey" destination="-1" eventType="touchUpInside" id="JkZ-zp-9cU"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHK-vx-0y5">
+                    <rect key="frame" x="262" y="166" width="30" height="26"/>
+                    <state key="normal" backgroundImage="emptyFav.png"/>
+                    <connections>
+                        <action selector="favorite" destination="-1" eventType="touchUpInside" id="7xh-lb-4lS"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pt3-J7-Phd">
+                    <rect key="frame" x="48" y="97" width="204" height="57"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" title="ANOTHER ONE">
+                        <color key="titleColor" red="0.99215686270000003" green="0.87058823529999996" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="generateQuote" destination="-1" eventType="touchUpInside" id="qoS-XA-BBe"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="0.24581719260000001" green="0.81693608709999999" blue="0.77763505669999999" alpha="1" colorSpace="calibratedRGB"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
+    <resources>
+        <image name="charGlobe.png" width="256" height="256"/>
+        <image name="emptyFav.png" width="238" height="201"/>
+        <image name="khaled.png" width="1950" height="1290"/>
+    </resources>
 </document>
