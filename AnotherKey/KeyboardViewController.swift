@@ -74,7 +74,7 @@ class KeyboardViewController: UIInputViewController {
         let randomIndex = Int(arc4random_uniform(9))
 
         
-        if favoriteArray.contains(randomIndex) {
+        if !favoriteArray.contains(randomIndex) {
             self.favButton.setBackgroundImage(UIImage(named: "emptyFav.png"), forState: .Normal)
 
         }

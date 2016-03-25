@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var testBox: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,5 +31,8 @@ class ViewController: UIViewController {
         UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
     }
     
+    @IBAction func test(){
+        testBox.hidden = false;
+    }
 }
 
