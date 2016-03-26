@@ -12,9 +12,7 @@ class KeyboardViewController: UIInputViewController {
     
     var keyboardView: UIView!
     var currentIndex: Int!
-    var favSelect = true
-    @IBOutlet weak var favButton: UIButton!
-    
+    var favSelect = true    
     
     override func updateViewConstraints() {
         super.updateViewConstraints()
@@ -72,46 +70,11 @@ class KeyboardViewController: UIInputViewController {
     @IBAction func generateQuote() {
         
         let randomIndex = Int(arc4random_uniform(9))
-
-        
-        if !favoriteArray.contains(randomIndex) {
-            self.favButton.setBackgroundImage(UIImage(named: "emptyFav.png"), forState: .Normal)
-
-        }
         
         let proxy = textDocumentProxy as UITextDocumentProxy
         proxy.insertText(quotesArray[randomIndex])
         currentIndex = randomIndex
 
-        
-    }
-    
-    
-    @IBAction func favorite (){
-        if favSelect == true {
-            self.favButton.setBackgroundImage(UIImage(named: "filledFav.png"), forState: .Normal)
-            
-            favSelect = false
-            
-            if  !favoriteArray.contains(currentIndex){
-
-                favoriteArray.append(currentIndex)
-                quotesArray.append(quotesArray[currentIndex!])
-                
-            }
-            
-        } else {
-            
-            self.favButton.setBackgroundImage(UIImage(named: "emptyFav.png"), forState: .Normal)
-            favSelect = true
-            
-            if favoriteArray.contains(currentIndex){
-                
-                favoriteArray.removeAtIndex(favoriteArray.indexOf(currentIndex)!)
-                
-            }
-        
-        }
         
     }
     
