@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyboardViewController" customModule="AnotherKey" customModuleProvider="target">
@@ -15,26 +16,34 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="khaled.png" translatesAutoresizingMaskIntoConstraints="NO" id="AgD-02-vum">
-                    <rect key="frame" x="101" y="0.0" width="136" height="70"/>
-                </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBs-RU-EYf">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBs-RU-EYf">
                     <rect key="frame" x="8" y="162" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="IGz-Q3-mny"/>
+                        <constraint firstAttribute="width" constant="30" id="u5L-C7-YJO"/>
+                    </constraints>
                     <state key="normal" backgroundImage="charGlobe.png"/>
                     <connections>
                         <action selector="nextKey" destination="-1" eventType="touchUpInside" id="JkZ-zp-9cU"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHK-vx-0y5">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHK-vx-0y5">
                     <rect key="frame" x="262" y="166" width="30" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="ebQ-9L-3Dt"/>
+                        <constraint firstAttribute="height" constant="26" id="ra3-3K-QKT"/>
+                    </constraints>
                     <state key="normal" backgroundImage="emptyFav.png"/>
                     <connections>
                         <action selector="favorite" destination="-1" eventType="touchUpInside" id="7xh-lb-4lS"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pt3-J7-Phd">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pt3-J7-Phd">
                     <rect key="frame" x="48" y="97" width="204" height="57"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="57" id="hBE-pR-GPG"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="20"/>
                     <state key="normal" title="ANOTHER ONE">
                         <color key="titleColor" red="0.99215686270000003" green="0.87058823529999996" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -43,8 +52,24 @@
                         <action selector="generateQuote" destination="-1" eventType="touchUpInside" id="qoS-XA-BBe"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="khaled.png" translatesAutoresizingMaskIntoConstraints="NO" id="AgD-02-vum">
+                    <rect key="frame" x="82" y="0.0" width="136" height="70"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.24581719260000001" green="0.81693608709999999" blue="0.77763505669999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="AgD-02-vum" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="82" id="0BG-2d-S3K"/>
+                <constraint firstItem="fBs-RU-EYf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="20V-M6-xgX"/>
+                <constraint firstItem="AgD-02-vum" firstAttribute="centerX" secondItem="Pt3-J7-Phd" secondAttribute="centerX" id="G60-e5-cvS"/>
+                <constraint firstItem="cHK-vx-0y5" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="H7Q-h5-WOx"/>
+                <constraint firstItem="fBs-RU-EYf" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottomMargin" id="Svx-uN-7xR"/>
+                <constraint firstItem="AgD-02-vum" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="UXM-qu-S7v"/>
+                <constraint firstItem="Pt3-J7-Phd" firstAttribute="top" secondItem="AgD-02-vum" secondAttribute="bottom" constant="27" id="Vc8-VL-MzC"/>
+                <constraint firstItem="Pt3-J7-Phd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="48" id="ag9-Af-pNI"/>
+                <constraint firstAttribute="bottom" secondItem="Pt3-J7-Phd" secondAttribute="bottom" constant="46" id="hdU-6h-erz"/>
+                <constraint firstItem="AgD-02-vum" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ycY-PB-EB6"/>
+                <constraint firstItem="fBs-RU-EYf" firstAttribute="bottom" secondItem="cHK-vx-0y5" secondAttribute="bottom" id="zUr-Ot-V5F"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
@@ -52,6 +77,6 @@
     <resources>
         <image name="charGlobe.png" width="256" height="256"/>
         <image name="emptyFav.png" width="238" height="201"/>
-        <image name="khaled.png" width="1950" height="1290"/>
+        <image name="khaled.png" width="1109" height="1109"/>
     </resources>
 </document>
