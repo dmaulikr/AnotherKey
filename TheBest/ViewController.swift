@@ -31,6 +31,10 @@ class ViewController: UIViewController {
         UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
     }
     
+    
+    
+    
+
     @IBAction func test(){
         testBox.hidden = false;
     }
