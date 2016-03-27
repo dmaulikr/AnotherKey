@@ -59,7 +59,7 @@
                                     <segue destination="s0Y-iI-REA" kind="show" id="5og-pR-Wjh"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="General -&gt; Keyboard-&gt; Keyboards  -&gt; Add New Keyboard -&gt; TheBest" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7Uf-yq-3Ll">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="General -&gt; Keyboard-&gt; Keyboards  -&gt; Add New Keyboard -&gt; AnotherKey" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7Uf-yq-3Ll">
                                 <rect key="frame" x="181" y="226" width="239" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="3dL-0r-NIE"/>
