@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:TheBest.xcodeproj">
+      location = "self:/Users/Jessica/Documents/ImFlawless/Projects/iOSProj/TheBest/TheBest.xcodeproj">
    </FileRef>
 </Workspace>

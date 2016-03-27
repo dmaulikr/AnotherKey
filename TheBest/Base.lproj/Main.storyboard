@@ -56,41 +56,105 @@
                                     <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="test" destination="BYZ-38-t0r" eventType="touchUpInside" id="DJ1-oF-JWM"/>
+                                    <segue destination="s0Y-iI-REA" kind="show" id="5og-pR-Wjh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New Keyboard  -&gt; TheBest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Tr-I6-0Dr">
-                                <rect key="frame" x="146" y="227" width="308" height="41"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="General -&gt; Keyboard-&gt; Keyboards  -&gt; Add New Keyboard -&gt; TheBest" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7Uf-yq-3Ll">
+                                <rect key="frame" x="181" y="226" width="239" height="53"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="DmA-0z-Ky0"/>
-                                    <constraint firstAttribute="width" constant="308" id="EGH-U1-IWu"/>
+                                    <constraint firstAttribute="height" constant="53" id="3dL-0r-NIE"/>
+                                    <constraint firstAttribute="width" constant="239" id="JmH-Fx-rDZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="107" y="548" width="167" height="39"/>
-                                </variation>
-                            </label>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="GYk-QS-9dw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3lS-x0-xDP"/>
-                            <constraint firstItem="9Tr-I6-0Dr" firstAttribute="top" secondItem="GYk-QS-9dw" secondAttribute="bottom" constant="58" id="H5a-hG-8Oy"/>
+                            <constraint firstItem="7Uf-yq-3Ll" firstAttribute="centerX" secondItem="IKJ-iq-aPg" secondAttribute="centerX" id="7fc-Vl-gzb"/>
+                            <constraint firstItem="7Uf-yq-3Ll" firstAttribute="top" secondItem="GYk-QS-9dw" secondAttribute="bottom" constant="57" id="CWW-cQ-4YO"/>
+                            <constraint firstItem="IKJ-iq-aPg" firstAttribute="top" secondItem="7Uf-yq-3Ll" secondAttribute="bottom" constant="14" id="KZh-qn-YBt"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Uei-Iz-E41" secondAttribute="bottom" constant="170" id="MtR-Zq-RQS"/>
                             <constraint firstItem="Uei-Iz-E41" firstAttribute="top" secondItem="IKJ-iq-aPg" secondAttribute="bottom" constant="41" id="Rw0-61-sIh"/>
                             <constraint firstItem="IKJ-iq-aPg" firstAttribute="trailing" secondItem="Uei-Iz-E41" secondAttribute="trailing" id="aiU-fX-F2d"/>
-                            <constraint firstItem="9Tr-I6-0Dr" firstAttribute="centerX" secondItem="IKJ-iq-aPg" secondAttribute="centerX" id="djJ-Ld-fAN"/>
-                            <constraint firstItem="IKJ-iq-aPg" firstAttribute="top" secondItem="9Tr-I6-0Dr" secondAttribute="bottom" constant="25" id="hLb-KV-lfj"/>
                             <constraint firstItem="IKJ-iq-aPg" firstAttribute="leading" secondItem="Uei-Iz-E41" secondAttribute="leading" id="qLo-5z-h37"/>
+                            <constraint firstItem="7Uf-yq-3Ll" firstAttribute="centerX" secondItem="GYk-QS-9dw" secondAttribute="centerX" id="s42-2Z-yDe"/>
                             <constraint firstItem="GYk-QS-9dw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="58" id="sbP-Se-wrI"/>
-                            <constraint firstItem="GYk-QS-9dw" firstAttribute="centerX" secondItem="9Tr-I6-0Dr" secondAttribute="centerX" id="yZd-MD-aUY"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="243" y="350"/>
+            <point key="canvasLocation" x="296" y="329"/>
+        </scene>
+        <!--Test Controller-->
+        <scene sceneID="jjw-ec-IE0">
+            <objects>
+                <viewController id="s0Y-iI-REA" customClass="TestController" customModule="TheBest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lbq-yg-Uf2"/>
+                        <viewControllerLayoutGuide type="bottom" id="997-4h-SYz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q8R-MU-XB7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ANOTHER KEY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0P-05-hln">
+                                <rect key="frame" x="131" y="78" width="339" height="91"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91" id="33d-p3-qNy"/>
+                                    <constraint firstAttribute="width" constant="339" id="F7n-gf-UdQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="94" y="211" width="189" height="72"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="512-RI-HJZ">
+                                <rect key="frame" x="209" y="454" width="182" height="48"/>
+                                <color key="backgroundColor" red="0.24581719260000001" green="0.81693608709999999" blue="0.77763505669999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="182" id="3lM-Z0-cGS"/>
+                                    <constraint firstAttribute="height" constant="48" id="gOw-Cr-DF5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="BACK">
+                                    <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="vjD-Jv-jGP"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Snk-ZO-NEF">
+                                <rect key="frame" x="180" y="251" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.87058823529999996" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="trf-Vm-d1a"/>
+                                </constraints>
+                                <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="E0P-05-hln" firstAttribute="centerX" secondItem="Snk-ZO-NEF" secondAttribute="centerX" id="62X-4C-6Dx"/>
+                            <constraint firstItem="512-RI-HJZ" firstAttribute="top" secondItem="Snk-ZO-NEF" secondAttribute="bottom" constant="75" id="91v-eB-zDF"/>
+                            <constraint firstItem="E0P-05-hln" firstAttribute="top" secondItem="Lbq-yg-Uf2" secondAttribute="bottom" constant="58" id="Cbz-H7-jZY"/>
+                            <constraint firstItem="Snk-ZO-NEF" firstAttribute="centerX" secondItem="512-RI-HJZ" secondAttribute="centerX" id="bKu-DK-hVU"/>
+                            <constraint firstItem="Snk-ZO-NEF" firstAttribute="top" secondItem="E0P-05-hln" secondAttribute="bottom" constant="82" id="ceD-0p-Ldv"/>
+                            <constraint firstItem="E0P-05-hln" firstAttribute="centerX" secondItem="q8R-MU-XB7" secondAttribute="centerX" id="uAK-b9-MVB"/>
+                            <constraint firstItem="997-4h-SYz" firstAttribute="top" secondItem="512-RI-HJZ" secondAttribute="bottom" constant="98" id="vmk-bd-j2w"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GMb-jz-t3V" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1006" y="329"/>
         </scene>
     </scenes>
 </document>

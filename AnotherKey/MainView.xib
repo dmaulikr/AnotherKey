@@ -11,8 +11,15 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBs-RU-EYf">
+                    <rect key="frame" x="8" y="165" width="37" height="37"/>
+                    <state key="normal" backgroundImage="globe.png"/>
+                    <connections>
+                        <action selector="nextKey" destination="-1" eventType="touchUpInside" id="JkZ-zp-9cU"/>
+                    </connections>
+                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pt3-J7-Phd">
-                    <rect key="frame" x="36" y="80" width="249" height="59"/>
+                    <rect key="frame" x="63" y="80" width="249" height="59"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="20"/>
                     <state key="normal" title="ANOTHER ONE">
@@ -20,13 +27,6 @@
                     </state>
                     <connections>
                         <action selector="generateQuote" destination="-1" eventType="touchUpInside" id="qoS-XA-BBe"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBs-RU-EYf">
-                    <rect key="frame" x="142" y="22" width="37" height="37"/>
-                    <state key="normal" backgroundImage="globe.png"/>
-                    <connections>
-                        <action selector="nextKey" destination="-1" eventType="touchUpInside" id="JkZ-zp-9cU"/>
                     </connections>
                 </button>
             </subviews>
